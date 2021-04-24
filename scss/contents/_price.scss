@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+/*================================================================
+#price
+================================================================*/
+.price {
+  @extend %section;
+  padding: 159px 120px 160px 180px;
+
+  @include mq(lg) {
+    padding: 159px 60px 160px 90px;
+  }
+
+  @include mq(sm) {
+    padding: 85px 5% 90px;
+  }
+
+  &__container {
+    @extend %container;
+    max-width: 1140px;
+  }
+
+  &__box {
+    text-align: right;
+    margin-right: 56px;
+
+    @include mq(sm) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    @extend %title;
+
+    @include mq(sm) {
+      font-size: 25px;
+      letter-spacing: .06%;
+      line-height: 34px;
+
+      &::after {
+        height: 1px;
+      }
+    }
+  }
+
+  &__subtitle {
+    @extend %title-sub;
+
+    @include mq(sm) {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: .12em;
+      margin-top: 11px;
+    }
+  }
+
+  &__list {
+    margin: 13px 250px 0 0;
+
+    @include mq(lg) {
+      margin: 32px 0 0;
+    }
+
+    @include mq(sm) {
+      margin: 5px 0 0;
+    }
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    height: 121px;
+
+    @include mq(sm) {
+      height: 72px;
+    }
+  }
+
+  &__image {
+    width: 42px;
+    height: 41px;
+    margin-right: 33px;
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    color: $font-black;
+    font-family: $font-family-noto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: .08em;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+
+    ::after {
+      background: rgba(66, 66, 66, 0.2);
+      bottom: -45px;
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+    }
+
+    @include mq(sm) {
+      font-size: 12px;
+      line-height: 18px;
+
+      ::after {
+        bottom: -27px;
+      }
+    }
+  }
+
+  &__detail {
+    padding-right: 10px;
+
+    @include mq(sm) {
+      padding-right: 0;
+    }
+  }
+}
