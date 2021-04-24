@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+/*================================================================
+#services
+================================================================*/
+.services {
+  background-color: $key-color-ash;
+  height: auto;
+  padding: 114px 120px 112px 120px;
+
+  @include mq(sm) {
+    padding: 98px 0 0;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__box {
+    text-align: right;
+    margin-right: 56px;
+
+    @include mq(sm) {
+      text-align: left;
+      padding-left: 5%;
+    }
+  }
+
+  &__title {
+    @extend %title;
+
+    @include mq(sm) {
+      font-size: 25px;
+      letter-spacing: .06%;
+      line-height: 34px;
+
+      &::after {
+        height: 1px;
+      }
+    }
+  }
+
+  &__subtitle {
+    @extend %title-sub;
+
+    @include mq(sm) {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.12em;
+      margin-top: 11px;
+    }
+  }
+
+  &__contents {
+    background-color: $key-color-black;
+    color: $key-color-white;
+    display: flex;
+    margin-top: 51px;
+
+    @include mq(sm) {
+      display: block;
+      margin-top: 30px;
+    }
+
+    div {
+      padding: 40px 40px 40px 31px;
+      height: auto;
+      width: 100%;
+
+      @include mq(sm) {
+        padding: 24px 5% 40px 5%;
+        height: 190px;
+      }
+
+      dt {
+        line-height: 22px;
+        letter-spacing: .04em;
+
+        @include mq(sm) {
+          font-size: 14px;
+          letter-spacing: .04em;
+        }
+
+        span {
+          display: block;
+          font-size: 20px;
+          font-family: $font-family-noto;
+          font-weight: 500;
+          line-height: 29px;
+          letter-spacing: .04em;
+          margin-top: 10px;
+
+          @include mq(sm) {
+            display: inline;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: .04em;
+            padding-left: 4px;
+          }
+        }
+      }
+
+      dd {
+        font-family: $font-family-noto;
+        line-height: 27px;
+        margin-top: 331px;
+
+        @include mq(sm) {
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: .08em;
+          margin-top: 68px;
+        }
+      }
+    }
+  }
+
+  &__item01 {
+    background: url("../images/pc/services1.png") center center / cover;
+  }
+
+  &__item02 {
+    background: url("../images/pc/services2.png") center center / cover;
+  }
+
+  &__item03 {
+    background: url("../images/pc/services3.png") center center / cover;
+  }
+
+  &__skills {
+    display: flex;
+    width: 800px;
+    margin: 44px auto 0;
+    word-wrap: break-word;
+
+    @include mq(lg) {
+      display: block;
+      width: 100%;
+      word-wrap: break-word;
+    }
+
+    @include mq(sm) {
+      display: block;
+      padding: 30px 5% 85px;
+      margin: 0 auto;
+      width: 100%;
+      word-wrap: break-word;
+    }
+  }
+
+  &__other {
+    color: $key-color-black;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: .04em;
+    line-height: 25px;
+    position: relative;
+    margin-right: 50px;
+
+    &::after {
+      background: $key-color-black;
+      bottom: 2px;
+      content: '';
+      left: 0;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+    }
+
+    @include mq(sm) {
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: .04em;
+
+      &::after {
+        bottom: 1px;
+        height: 1px;
+      }
+    }
+  }
+
+  &__languages {
+    font-family: $font-family-noto;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: .14em;
+    word-break: break-all;
+
+    @include mq(lg) {
+      margin-top: 13px;
+    }
+
+    @include mq(sm) {
+      font-size: 12px;
+      line-height: 25px;
+      letter-spacing: .14em;
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}

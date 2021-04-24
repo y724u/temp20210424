@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/*================================================================
+common
+================================================================*/
+@include mq(sm) {
+  .is-pc {
+    display: none;
+  }
+}
+
+@include mq(md) {
+  .is-sp {
+    display: none;
+  }
+}
+
+body {
+  color: $font-black;
+  cursor: none;
+  font-family: $font-family-alata;
+  letter-spacing: $letter-spacing;
+  position: relative;
+  z-index: 0;
+
+  @include mq(sm) {
+    background: none;
+    cursor: default;
+  }
+}
+
+@include mq(md) {
+
+  div,
+  li,
+  a,
+  img {
+    &:hover {
+      cursor: none;
+    }
+  }
+}
+
+.cursor {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transition: transform .4s;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  z-index: 10001;
+
+  &.is-active {
+    transform: scale(4);
+  }
+
+  @include mq(sm) {
+    display: none;
+  }
+}
+
+.cursor__wrapper {
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.fixed {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  @include mq(sm) {
+    // -webkit-transform: translate3d(0,0,0);
+    // transform: translate3d(0,0,0);
+    -webkit-backface-visibility:hidden;
+backface-visibility:hidden;
+overflow:hidden
+  }
+}
+
+img {
+  width: 100%;
+}
+
+%section {
+  background-color: $key-color-ash;
+  height: auto;
+  padding: 0 120px 0 180px;
+}
+
+%container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+%title {
+  color: $key-color-black;
+  display: inline-block;
+  font-size: $section-title-font-size;
+  letter-spacing: .06em;
+  line-height: 55px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: $key-color-black;
+  }
+}
+
+%title-sub {
+  color: $sub-title-color-ash;
+  font-family: $font-family-noto;
+  margin-top: 13px;
+  line-height: 24px;
+  letter-spacing: .12em;
+}
+
+%small-letters {
+  color: $key-color-black;
+  font-family: $font-family-noto;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: .04em;
+}
+
+%modal-letter {
+  color: $font-black;
+  font-family: $font-family-noto;
+  font-size: 16px;
+  line-height: 38px;
+  letter-spacing: .08em;
+}

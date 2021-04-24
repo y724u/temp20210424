@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/*================================================================
+#contact
+================================================================*/
+.contact {
+  background-color: $key-color-ash;
+  padding-left: 180px;
+  height: auto;
+
+  @include mq(sm) {
+    padding-left: 5%;
+  }
+
+  &__container {
+    background: #212121;
+    padding: 66px 0 50px 166px;
+
+    @include mq(sm) {
+      padding: 33px 0 54px 5%;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(lg) {
+      display: block;
+    }
+
+    @include mq(sm) {
+      display: block;
+    }
+  }
+
+  &__left {
+    width: 250px;
+  }
+
+  &__title {
+    @extend %title;
+    color: $key-color-white;
+
+    &::after {
+      background: $key-color-white;
+    }
+
+    @include mq(sm) {
+      font-size: 25px;
+      line-height: 34px;
+
+      &::after {
+        height: 1px;
+      }
+    }
+  }
+
+  &__subtitle {
+    @extend %title-sub;
+
+    @include mq(sm) {
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 11px;
+    }
+  }
+
+  &__address {
+    padding: 29px 230px 0 0;
+    @include mq(sm) {
+      padding: 20px 0 0;
+    }
+
+    p {
+      @extend %title-sub;
+      color: $key-color-white;
+      letter-spacing: .08em;
+
+      @include mq(sm) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    a {
+      @extend %title;
+      color: $key-color-white;
+      font-size: 30px;
+      line-height: 41px;
+      margin-top: 11px;
+
+      &::after {
+        background: $key-color-white;
+        height: 2px;
+      }
+
+      @include mq(sm) {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 2px;
+
+        &::after {
+          bottom: 1px;
+          height: 1px;
+        }
+      }
+    }
+  }
+
+  &__mail {
+    margin-top: 23px;
+  }
+}
